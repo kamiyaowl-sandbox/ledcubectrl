@@ -25,40 +25,57 @@ module ws2812b_driver(
 	 
     input [23:0] RAM_DATA,
     output reg [9:0] RAM_ADDR,
-	 output reg RAM_EN,
     output reg DOUT
     );
+	localparam  RAM_ADDRESS_MAX = 10'd512;
+	reg address_counter_reset;
+	reg address_increment;
+	
+	reg send_reset_code;
+	reg [23:0] ram_data_ratch;
 	reg [4:0] pwm_pixel_counter;
 	reg [9:0] pwm_counter;
-	reg done_data_send;
 
 	/* Block RAM DataRatch*/
 	always @ (negedge CLK) begin
-		if(RESET == 1'b1) begin
-			if(done_data_send == 1'b1) begin
+		if(RESET == 1'b1 && address_counter_reset == 1'b1) begin
+			if(address_increment == 1'b1) begin
 				//Address Increment
-				if(RAM_ADDR < 10'd64) begin
+				if(RAM_ADDR < RAM_ADDRESS_MAX) begin
 					RAM_ADDR <= RAM_ADDR + 10'b1;
 				end else begin
 					RAM_ADDR <= 10'b0;
 				end
+			end else begin
+				ram_data_ratch <= RAM_DATA;
 			end
 		end else begin
 			//RESET
 			RAM_ADDR <= 10'b0;
-			RAM_EN <= 1'b1;
+			ram_data_ratch <= 24'b0;
 		end
 	end
 	
 	/* PWM Create */
 	always @ (negedge CLK) begin
 		if(RESET == 1'b1) begin
-			if(RAM_ADDR == 10'b0) begin
+			if(send_reset_code) begin
 				//Reset Sequence + Data
 				if(pwm_counter < 10'd1000) begin
 					//RESET
 					DOUT <= 1'b0;
-				end else begin
+				end else begin	
+					send_reset_code = 1'b0;
+				end
+			end else begin
+					/* RESET */
+					DOUT <= 1'b0;
+					send_reset_code <= 1'b1;
+					address_counter_reset <= 1'b1;/////////////////////////////////////////////
+			end
+			
+			if(RAM_ADDR == 10'b0) begin
+
 				//TODO:Function
 					case(pwm_pixel_counter) 
 						5'd0  : DOUT <= RAM_DATA[23];
@@ -93,10 +110,10 @@ module ws2812b_driver(
 		end else begin
 			//RESET
 			DOUT <= 1'b0;
-
-			pwm_pixel_counter <= 5'b0;
-			pwm_counter <= 10'b0;
-			done_data_send <= 24'b0;
+			address_counter_reset <= 1'b0;
+			address_increment <= 1'b0;
+	
+			send_reset_code <= 1'b1;
 		end
 	end
 

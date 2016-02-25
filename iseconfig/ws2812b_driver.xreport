@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-02-24T03:44:17</DateModified>
+  <DateModified>2016-02-24T20:09:10</DateModified>
   <ModuleName>ws2812b_driver</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/owl/repos/ledcubectrl/iseconfig/ws2812b_driver.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/owl/repos/ledcubectrl</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/owl/repos/ledcubectrl\</ImplementationReportsDirectory>
   <DateInitialized>2016-02-24T03:44:17</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
