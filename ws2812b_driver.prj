@@ -1,0 +1,2 @@
+verilog work "ws2812b_driver.v"
+verilog work "ipcore_dir/clk_gen/example_design/clk_gen_exdes.v"

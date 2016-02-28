@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj ledcubectrl -o C:/Users/owl/repos/ledcubectrl/ws2812b_driver.tfi -lib work C:/Users/owl/repos/ledcubectrl//ws2812b_driver.v -module ws2812b_driver -template C:/Xilinx/14.5/ISE_DS/ISE//data/tfi.tft -deleteonerror 

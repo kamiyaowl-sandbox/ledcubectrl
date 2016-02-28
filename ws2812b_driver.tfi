@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+ws2812b_driver instance_name (
+    .CLK(CLK), 
+    .RESET(RESET), 
+    .EN(EN), 
+    .RAM_DATA(RAM_DATA), 
+    .RAM_ADDR(RAM_ADDR), 
+    .DOUT(DOUT)
+    );
+
+

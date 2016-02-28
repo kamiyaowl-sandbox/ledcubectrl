@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/clk_gen.v"
+verilog work "ipcore_dir/clk_gen/example_design/clk_gen_exdes.v"
+verilog work "ws2812b_driver.v"
+verilog work "ipcore_dir/frame_buffer.v"
+verilog work "top.v"
+verilog work "tb_top.v"
+verilog work "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v"

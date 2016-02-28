@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/owl/repos/ledcubectrl/tb_top_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/tb_top/uut/ws2812b_driver1/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut/ws2812b_driver1/RESET" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut/ws2812b_driver1/DOUT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DOUT</obj_property>
+      <obj_property name="ObjectShortName">DOUT</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut/ws2812b_driver1/RAM_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RAM_DATA[23:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM_DATA[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut/ws2812b_driver1/send_reset_code" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">send_reset_code</obj_property>
+      <obj_property name="ObjectShortName">send_reset_code</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut/ws2812b_driver1/RAM_ADDR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RAM_ADDR[9:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM_ADDR[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut/ws2812b_driver1/send_data_index" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">send_data_index[4:0]</obj_property>
+      <obj_property name="ObjectShortName">send_data_index[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut/ws2812b_driver1/pwm_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pwm_counter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pwm_counter[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

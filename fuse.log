@@ -1,0 +1,37 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/owl/repos/ledcubectrl/tb_top_isim_beh.exe -prj C:/Users/owl/repos/ledcubectrl/tb_top_beh.prj work.tb_top work.glbl 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/owl/repos/ledcubectrl/ipcore_dir/clk_gen.v" into library work
+Analyzing Verilog file "C:/Users/owl/repos/ledcubectrl/ipcore_dir/clk_gen/example_design/clk_gen_exdes.v" into library work
+Analyzing Verilog file "C:/Users/owl/repos/ledcubectrl/ws2812b_driver.v" into library work
+Analyzing Verilog file "C:/Users/owl/repos/ledcubectrl/ipcore_dir/frame_buffer.v" into library work
+Analyzing Verilog file "C:/Users/owl/repos/ledcubectrl/top.v" into library work
+Analyzing Verilog file "C:/Users/owl/repos/ledcubectrl/tb_top.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module IBUFG
+Compiling module dcm_sp_clock_divide_by_2
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_clock_lost
+Compiling module DCM_SP(CLKFX_MULTIPLY=5,CLKIN_PE...
+Compiling module BUFG
+Compiling module clk_gen
+Compiling module ws2812b_driver
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module frame_buffer
+Compiling module top
+Compiling module tb_top
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 17 Verilog Units
+Built simulation executable C:/Users/owl/repos/ledcubectrl/tb_top_isim_beh.exe
+Fuse Memory Usage: 34184 KB
+Fuse CPU Usage: 452 ms

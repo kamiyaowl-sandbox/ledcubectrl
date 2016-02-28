@@ -1,0 +1,7 @@
+verilog isim_temp "ipcore_dir/clk_gen.v"
+verilog isim_temp "ipcore_dir/clk_gen/example_design/clk_gen_exdes.v"
+verilog isim_temp "ws2812b_driver.v"
+verilog isim_temp "ipcore_dir/frame_buffer.v"
+verilog isim_temp "top.v"
+verilog isim_temp "tb_top.v"
+verilog isim_temp "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v"

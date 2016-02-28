@@ -1,4 +1,5 @@
 # Output products list for <clk_gen>
+_xmsgs\pn_parser.xmsgs
 clk_gen.asy
 clk_gen.gise
 clk_gen.sym

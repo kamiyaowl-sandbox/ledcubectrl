@@ -1,0 +1,445 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen.v" into library work
+Parsing module <clk_gen>.
+Analyzing Verilog file "C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen\example_design\clk_gen_exdes.v" into library work
+Parsing module <clk_gen_exdes>.
+Analyzing Verilog file "C:\Users\owl\repos\ledcubectrl\ws2812b_driver.v" into library work
+Parsing module <ws2812b_driver>.
+Analyzing Verilog file "C:\Users\owl\repos\ledcubectrl\ipcore_dir\frame_buffer.v" into library work
+Parsing module <frame_buffer>.
+Analyzing Verilog file "C:\Users\owl\repos\ledcubectrl\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <clk_gen>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=5,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=50.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen.v" Line 128: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen.v" Line 129: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <ws2812b_driver>.
+WARNING:HDLCompiler:634 - "C:\Users\owl\repos\ledcubectrl\ws2812b_driver.v" Line 97: Net <send_data_0009> does not have a driver.
+
+Elaborating module <frame_buffer>.
+WARNING:HDLCompiler:1499 - "C:\Users\owl\repos\ledcubectrl\ipcore_dir\frame_buffer.v" Line 39: Empty module <frame_buffer> remains a black box.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "C:\Users\owl\repos\ledcubectrl\top.v".
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <clk_gen>.
+    Related source file is "C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen.v".
+    Summary:
+	no macro.
+Unit <clk_gen> synthesized.
+
+Synthesizing Unit <ws2812b_driver>.
+    Related source file is "C:\Users\owl\repos\ledcubectrl\ws2812b_driver.v".
+WARNING:Xst:653 - Signal <send_data_0009> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <DOUT>.
+    Found 1-bit register for signal <send_reset_code>.
+    Found 5-bit register for signal <send_data_index>.
+    Found 10-bit register for signal <pwm_counter>.
+    Found 10-bit register for signal <RAM_ADDR>.
+    Found 10-bit adder for signal <pwm_counter[9]_GND_6_o_add_13_OUT> created at line 76.
+    Found 5-bit adder for signal <send_data_index[4]_GND_6_o_add_15_OUT> created at line 80.
+    Found 10-bit adder for signal <RAM_ADDR[9]_GND_6_o_add_17_OUT> created at line 85.
+    Found 1-bit 25-to-1 multiplexer for signal <send_data_index[4]_send_data_0009_Mux_8_o> created at line 101.
+    Found 10-bit comparator lessequal for signal <pwm_counter[9]_PWR_6_o_LessThan_4_o> created at line 54
+    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_11_o> created at line 67
+    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_12_o> created at line 70
+    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_13_o> created at line 74
+    Found 5-bit comparator greater for signal <send_data_index[4]_PWR_6_o_LessThan_15_o> created at line 77
+    Found 10-bit comparator greater for signal <RAM_ADDR[9]_GND_6_o_LessThan_17_o> created at line 81
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <ws2812b_driver> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 5-bit adder                                           : 1
+# Registers                                            : 5
+ 1-bit register                                        : 2
+ 10-bit register                                       : 2
+ 5-bit register                                        : 1
+# Comparators                                          : 6
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 25-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/frame_buffer.ngc>.
+Loading core <frame_buffer> for timing and area information for instance <frame_buffer1>.
+
+Synthesizing (advanced) Unit <ws2812b_driver>.
+The following registers are absorbed into counter <send_data_index>: 1 register on signal <send_data_index>.
+The following registers are absorbed into counter <RAM_ADDR>: 1 register on signal <RAM_ADDR>.
+The following registers are absorbed into counter <pwm_counter>: 1 register on signal <pwm_counter>.
+Unit <ws2812b_driver> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 5-bit up counter                                      : 1
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Comparators                                          : 6
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 1-bit 25-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <ws2812b_driver> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 93
+#      GND                         : 2
+#      INV                         : 4
+#      LUT1                        : 18
+#      LUT2                        : 4
+#      LUT3                        : 4
+#      LUT4                        : 3
+#      LUT5                        : 7
+#      LUT6                        : 12
+#      MUXCY                       : 18
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 27
+#      FDR_1                       : 1
+#      FDRE                        : 25
+#      FDRE_1                      : 1
+# RAMS                             : 2
+#      RAMB16BWER                  : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 2
+#      IBUFG                       : 1
+#      OBUF                        : 1
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              27  out of  11440     0%  
+ Number of Slice LUTs:                   52  out of   5720     0%  
+    Number used as Logic:                52  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     52
+   Number with an unused Flip Flop:      25  out of     52    48%  
+   Number with an unused LUT:             0  out of     52     0%  
+   Number of fully used LUT-FF pairs:    27  out of     52    51%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    102     1%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRL/BUFHCEs:         2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_IN                             | DCM_SP:CLK0            | 29    |
+CLK_IN                             | DCM_SP:CLKFX           | 2     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.559ns (Maximum Frequency: 104.612MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_IN'
+  Clock period: 9.559ns (frequency: 104.612MHz)
+  Total number of paths / destination ports: 1354 / 100
+-------------------------------------------------------------------------
+Delay:               4.780ns (Levels of Logic = 4)
+  Source:            frame_buffer1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SDP.SIMPLE_PRIM18.ram (RAM)
+  Destination:       ws2812b_driver1/DOUT (FF)
+  Source Clock:      CLK_IN rising
+  Destination Clock: CLK_IN falling
+
+  Data Path: frame_buffer1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SDP.SIMPLE_PRIM18.ram to ws2812b_driver1/DOUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB2    1   1.850   0.808  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SDP.SIMPLE_PRIM18.ram (doutb<11>)
+     end scope: 'frame_buffer1:doutb<11>'
+     LUT6:I3->O            1   0.205   0.827  ws2812b_driver1/Mmux_send_data_index[4]_send_data_0009_Mux_8_o_10 (ws2812b_driver1/Mmux_send_data_index[4]_send_data_0009_Mux_8_o_10)
+     LUT6:I2->O            1   0.203   0.580  ws2812b_driver1/Mmux_send_data_index[4]_send_data_0009_Mux_8_o_4 (ws2812b_driver1/Mmux_send_data_index[4]_send_data_0009_Mux_8_o_4)
+     LUT6:I5->O            1   0.205   0.000  ws2812b_driver1/Mmux_pwm_counter[9]_pwm_counter[9]_MUX_58_o1 (ws2812b_driver1/pwm_counter[9]_pwm_counter[9]_MUX_58_o)
+     FDRE_1:D                  0.102          ws2812b_driver1/DOUT
+    ----------------------------------------
+    Total                      4.780ns (2.565ns logic, 2.215ns route)
+                                       (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_IN'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            ws2812b_driver1/DOUT (FF)
+  Destination:       DOUT (PAD)
+  Source Clock:      CLK_IN falling
+
+  Data Path: ws2812b_driver1/DOUT to DOUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE_1:C->Q           1   0.447   0.579  ws2812b_driver1/DOUT (ws2812b_driver1/DOUT)
+     OBUF:I->O                 2.571          DOUT_OBUF (DOUT)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_IN
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_IN         |         |    1.480|    5.102|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.87 secs
+ 
+--> 
+
+Total memory usage is 278852 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
