@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Reading design: top.prj
 
@@ -136,7 +136,7 @@ WARNING:HDLCompiler:1127 - "C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen.v"
 Elaborating module <BUFG>.
 
 Elaborating module <ws2812b_driver>.
-WARNING:HDLCompiler:634 - "C:\Users\owl\repos\ledcubectrl\ws2812b_driver.v" Line 97: Net <send_data_0009> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\owl\repos\ledcubectrl\ws2812b_driver.v" Line 96: Net <send_data_0009> does not have a driver.
 
 Elaborating module <frame_buffer>.
 WARNING:HDLCompiler:1499 - "C:\Users\owl\repos\ledcubectrl\ipcore_dir\frame_buffer.v" Line 39: Empty module <frame_buffer> remains a black box.
@@ -165,21 +165,21 @@ WARNING:Xst:653 - Signal <send_data_0009> is used but never assigned. This sourc
     Found 5-bit register for signal <send_data_index>.
     Found 10-bit register for signal <pwm_counter>.
     Found 10-bit register for signal <RAM_ADDR>.
-    Found 10-bit adder for signal <pwm_counter[9]_GND_6_o_add_13_OUT> created at line 76.
-    Found 5-bit adder for signal <send_data_index[4]_GND_6_o_add_15_OUT> created at line 80.
-    Found 10-bit adder for signal <RAM_ADDR[9]_GND_6_o_add_17_OUT> created at line 85.
-    Found 1-bit 25-to-1 multiplexer for signal <send_data_index[4]_send_data_0009_Mux_8_o> created at line 101.
-    Found 10-bit comparator lessequal for signal <pwm_counter[9]_PWR_6_o_LessThan_4_o> created at line 54
-    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_11_o> created at line 67
-    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_12_o> created at line 70
-    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_13_o> created at line 74
-    Found 5-bit comparator greater for signal <send_data_index[4]_PWR_6_o_LessThan_15_o> created at line 77
-    Found 10-bit comparator greater for signal <RAM_ADDR[9]_GND_6_o_LessThan_17_o> created at line 81
+    Found 10-bit adder for signal <pwm_counter[9]_GND_6_o_add_13_OUT> created at line 75.
+    Found 5-bit adder for signal <send_data_index[4]_GND_6_o_add_15_OUT> created at line 79.
+    Found 10-bit adder for signal <RAM_ADDR[9]_GND_6_o_add_17_OUT> created at line 84.
+    Found 1-bit 25-to-1 multiplexer for signal <send_data_index[4]_send_data_0009_Mux_8_o> created at line 100.
+    Found 10-bit comparator lessequal for signal <pwm_counter[9]_PWR_6_o_LessThan_4_o> created at line 53
+    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_11_o> created at line 66
+    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_12_o> created at line 69
+    Found 10-bit comparator greater for signal <pwm_counter[9]_GND_6_o_LessThan_13_o> created at line 73
+    Found 5-bit comparator greater for signal <send_data_index[4]_PWR_6_o_LessThan_15_o> created at line 76
+    Found 10-bit comparator greater for signal <RAM_ADDR[9]_GND_6_o_LessThan_17_o> created at line 80
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred  27 D-type flip-flop(s).
 	inferred   6 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred   4 Multiplexer(s).
 Unit <ws2812b_driver> synthesized.
 
 =========================================================================
@@ -197,9 +197,10 @@ Macro Statistics
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 1
  5-bit comparator greater                              : 1
-# Multiplexers                                         : 2
+# Multiplexers                                         : 4
  1-bit 2-to-1 multiplexer                              : 1
  1-bit 25-to-1 multiplexer                             : 1
+ 10-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
 
@@ -213,24 +214,26 @@ Loading core <frame_buffer> for timing and area information for instance <frame_
 Synthesizing (advanced) Unit <ws2812b_driver>.
 The following registers are absorbed into counter <send_data_index>: 1 register on signal <send_data_index>.
 The following registers are absorbed into counter <RAM_ADDR>: 1 register on signal <RAM_ADDR>.
-The following registers are absorbed into counter <pwm_counter>: 1 register on signal <pwm_counter>.
 Unit <ws2812b_driver> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 3
- 10-bit up counter                                     : 2
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
  5-bit up counter                                      : 1
-# Registers                                            : 2
- Flip-Flops                                            : 2
+# Registers                                            : 12
+ Flip-Flops                                            : 12
 # Comparators                                          : 6
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 1
  5-bit comparator greater                              : 1
-# Multiplexers                                         : 1
+# Multiplexers                                         : 3
  1-bit 25-to-1 multiplexer                             : 1
+ 10-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
 
@@ -241,6 +244,7 @@ Macro Statistics
 Optimizing unit <top> ...
 
 Optimizing unit <ws2812b_driver> ...
+WARNING:Xst:1710 - FF/Latch <ws2812b_driver1/RAM_ADDR_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -252,8 +256,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 27
- Flip-Flops                                            : 27
+# Registers                                            : 26
+ Flip-Flops                                            : 26
 
 =========================================================================
 
@@ -276,28 +280,29 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 93
+# BELS                             : 74
 #      GND                         : 2
 #      INV                         : 4
-#      LUT1                        : 18
-#      LUT2                        : 4
-#      LUT3                        : 4
-#      LUT4                        : 3
-#      LUT5                        : 7
-#      LUT6                        : 12
-#      MUXCY                       : 18
+#      LUT1                        : 8
+#      LUT2                        : 2
+#      LUT3                        : 2
+#      LUT4                        : 8
+#      LUT5                        : 9
+#      LUT6                        : 21
+#      MUXCY                       : 8
 #      VCC                         : 1
-#      XORCY                       : 20
-# FlipFlops/Latches                : 27
+#      XORCY                       : 9
+# FlipFlops/Latches                : 26
 #      FDR_1                       : 1
-#      FDRE                        : 25
-#      FDRE_1                      : 1
+#      FDRE                        : 14
+#      FDRE_1                      : 11
 # RAMS                             : 2
 #      RAMB16BWER                  : 1
 #      RAMB8BWER                   : 1
 # Clock Buffers                    : 2
 #      BUFG                        : 2
-# IO Buffers                       : 2
+# IO Buffers                       : 3
+#      IBUF                        : 1
 #      IBUFG                       : 1
 #      OBUF                        : 1
 # DCMs                             : 1
@@ -310,20 +315,20 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              27  out of  11440     0%  
- Number of Slice LUTs:                   52  out of   5720     0%  
-    Number used as Logic:                52  out of   5720     0%  
+ Number of Slice Registers:              26  out of  11440     0%  
+ Number of Slice LUTs:                   54  out of   5720     0%  
+    Number used as Logic:                54  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     52
-   Number with an unused Flip Flop:      25  out of     52    48%  
-   Number with an unused LUT:             0  out of     52     0%  
-   Number of fully used LUT-FF pairs:    27  out of     52    51%  
+ Number of LUT Flip Flop pairs used:     54
+   Number with an unused Flip Flop:      28  out of     54    51%  
+   Number with an unused LUT:             0  out of     54     0%  
+   Number of fully used LUT-FF pairs:    26  out of     54    48%  
    Number of unique control sets:         5
 
 IO Utilization: 
- Number of IOs:                           2
- Number of bonded IOBs:                   2  out of    102     1%  
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    102     2%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                2  out of     32     6%  
@@ -351,7 +356,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK_IN                             | DCM_SP:CLK0            | 29    |
+CLK_IN                             | DCM_SP:CLK0            | 28    |
 CLK_IN                             | DCM_SP:CLKFX           | 2     |
 -----------------------------------+------------------------+-------+
 
@@ -364,7 +369,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 9.559ns (Maximum Frequency: 104.612MHz)
-   Minimum input arrival time before clock: No path found
+   Minimum input arrival time before clock: 3.530ns
    Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
@@ -375,7 +380,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_IN'
   Clock period: 9.559ns (frequency: 104.612MHz)
-  Total number of paths / destination ports: 1354 / 100
+  Total number of paths / destination ports: 1396 / 94
 -------------------------------------------------------------------------
 Delay:               4.780ns (Levels of Logic = 4)
   Source:            frame_buffer1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SDP.SIMPLE_PRIM18.ram (RAM)
@@ -391,11 +396,31 @@ Delay:               4.780ns (Levels of Logic = 4)
      end scope: 'frame_buffer1:doutb<11>'
      LUT6:I3->O            1   0.205   0.827  ws2812b_driver1/Mmux_send_data_index[4]_send_data_0009_Mux_8_o_10 (ws2812b_driver1/Mmux_send_data_index[4]_send_data_0009_Mux_8_o_10)
      LUT6:I2->O            1   0.203   0.580  ws2812b_driver1/Mmux_send_data_index[4]_send_data_0009_Mux_8_o_4 (ws2812b_driver1/Mmux_send_data_index[4]_send_data_0009_Mux_8_o_4)
-     LUT6:I5->O            1   0.205   0.000  ws2812b_driver1/Mmux_pwm_counter[9]_pwm_counter[9]_MUX_58_o1 (ws2812b_driver1/pwm_counter[9]_pwm_counter[9]_MUX_58_o)
+     LUT6:I5->O            1   0.205   0.000  ws2812b_driver1/Mmux_pwm_counter[9]_pwm_counter[9]_MUX_58_o11 (ws2812b_driver1/pwm_counter[9]_pwm_counter[9]_MUX_58_o)
      FDRE_1:D                  0.102          ws2812b_driver1/DOUT
     ----------------------------------------
     Total                      4.780ns (2.565ns logic, 2.215ns route)
                                        (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_IN'
+  Total number of paths / destination ports: 26 / 26
+-------------------------------------------------------------------------
+Offset:              3.530ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       ws2812b_driver1/pwm_counter_9 (FF)
+  Destination Clock: CLK_IN falling
+
+  Data Path: RESET to ws2812b_driver1/pwm_counter_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.222   0.819  RESET_IBUF (RESET_IBUF)
+     LUT5:I3->O           10   0.203   0.856  ws2812b_driver1/Reset_OR_DriverANDClockEnable12 (ws2812b_driver1/Reset_OR_DriverANDClockEnable1)
+     FDRE_1:R                  0.430          ws2812b_driver1/pwm_counter_0
+    ----------------------------------------
+    Total                      3.530ns (1.855ns logic, 1.675ns route)
+                                       (52.6% logic, 47.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_IN'
@@ -426,20 +451,20 @@ Clock to Setup on destination clock CLK_IN
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_IN         |         |    1.480|    5.102|         |
+CLK_IN         |         |    1.480|    5.489|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.87 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.99 secs
  
 --> 
 
 Total memory usage is 278852 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

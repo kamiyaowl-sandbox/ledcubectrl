@@ -5,19 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen.v" Line 128: Assignment to <arg fmt="%s" index="1">locked_int</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen.v" Line 128: Assignment to <arg fmt="%s" index="1">locked_int</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\owl\repos\ledcubectrl\ipcore_dir\clk_gen.v" Line 129: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\owl\repos\ledcubectrl\ws2812b_driver.v" Line 97: Net &lt;<arg fmt="%s" index="1">send_data_0009</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\owl\repos\ledcubectrl\ws2812b_driver.v" Line 96: Net &lt;<arg fmt="%s" index="1">send_data_0009</arg>&gt; does not have a driver.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\owl\repos\ledcubectrl\ipcore_dir\frame_buffer.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">frame_buffer</arg>&gt; remains a black box.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">send_data_0009</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">ws2812b_driver1/RAM_ADDR_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 </messages>

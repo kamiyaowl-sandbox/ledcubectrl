@@ -24,12 +24,12 @@ module top(
     output DOUT
     );
   wire clk_20MHz, clk_100MHz;
-  clk_gen instance_name
-   (// Clock in ports
+  clk_gen clk_gen1 (// Clock in ports
     .CLK_IN1(CLK_IN),      // IN
     // Clock out ports
     .CLK_100MHz(clk_100MHz),     // OUT
-    .CLK_20MHz(clk_20MHz));    // OUT
+    .CLK_20MHz(clk_20MHz)
+	);    // OUT
 
 	wire [23:0] ram_data;
 	wire [9:0]  ram_addr;
